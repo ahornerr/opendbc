@@ -51,23 +51,61 @@ BO_ 660 LIGHTS: 8 XXX
  SG_ RIGHT_TURN_SIGNAL : 6|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 344 TRANSMISSION: 8 XXX
- SG_ SPEED_1 : 7|16@0+ (0.01,0) [0|65535] "km/h" XXX
  SG_ SPEED_2 : 39|16@0+ (0.01,0) [0|65535] "km/h" XXX
  SG_ RPM : 23|16@0+ (1,0) [0|65535] "" XXX
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
  SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
  SG_ DISTANCE_COUNTER : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ SPEED_1 : 7|16@0+ (0.01,0) [0|65535] "km/h" XXX
 
 BO_ 356 ELECTRONICS: 8 XXX
- SG_ COOLING_FAN_ON : 22|1@0+ (1,0) [0|1] "" XXX
  SG_ CRUISE_ON : 5|1@0+ (1,0) [0|1] "" XXX
  SG_ LIGHTS_LOW : 1|1@0+ (1,0) [0|1] "" XXX
  SG_ LIGHTS_FOG : 21|1@0+ (1,0) [0|1] "" XXX
  SG_ CRUISE_UP : 7|1@0+ (1,0) [0|1] "" XXX
  SG_ CRUISE_DOWN : 6|1@0+ (1,0) [0|1] "" XXX
+ SG_ FAN_OR_AC : 22|1@0+ (1,0) [0|1] "" XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+
+BO_ 380 POWERTRAIN_2: 8 XXX
+ SG_ GAS_PRESSED : 39|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_PRESSED : 32|1@0+ (1,0) [0|1] "" XXX
+ SG_ CRUISE_ENGAGED : 35|1@0+ (1,0) [0|1] "" XXX
+ SG_ ALT_RPM : 23|16@0+ (1,0) [0|65535] "" XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+
+BO_ 392 NEW_MSG_1: 6 XXX
+ SG_ COUNTER : 45|2@0+ (1,0) [0|3] "" XXX
+ SG_ CHECKSUM : 40|4@1+ (1,0) [0|15] "" XXX
+
+BO_ 229 NEW_MSG_2: 4 XXX
+ SG_ CHECKSUM : 24|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 29|2@0+ (1,0) [0|3] "" XXX
+
+BO_ 310 POWERTRAIN_3: 8 XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+ SG_ THROTTLE : 32|8@1+ (1,0) [0|255] "" XXX
+ SG_ 136_FLAG_1 : 4|1@0+ (1,0) [0|1] "" XXX
+ SG_ 136_FLAG_2 : 1|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 314 UNKNOWN_ACCEL: 8 XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+ SG_ ACCEL_PEDAL : 8|8@1+ (1,0) [0|255] "" XXX
+
+BO_ 319 ECM: 8 XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+ SG_ 13F_FIRST : 7|16@0- (1,0) [0|65535] "" XXX
+ SG_ 13F_SECOND : 23|16@0- (1,0) [0|65535] "" XXX
+ SG_ 13F_THIRD : 39|16@0- (1,0) [0|65535] "" XXX
 
 
 
 
 CM_ SG_ 804 FUEL_CONSUMED "";
-CM_ SG_ 356 COOLING_FAN_ON "Might be A/C";
+CM_ SG_ 356 FAN_OR_AC "";
+CM_ SG_ 319 13F_THIRD "Always increments of 10";
