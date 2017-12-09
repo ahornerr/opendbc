@@ -103,9 +103,28 @@ BO_ 319 ECM: 8 XXX
  SG_ 13F_SECOND : 23|16@0- (1,0) [0|65535] "" XXX
  SG_ 13F_THIRD : 39|16@0- (1,0) [0|65535] "" XXX
 
+BO_ 149 NEW_MSG_3: 8 XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+
+BO_ 57 NEW_MSG_4: 2 XXX
+ SG_ CHECKSUM : 8|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 13|2@0+ (1,0) [0|3] "" XXX
+ SG_ 39_FIRST : 0|8@1+ (1,0) [0|255] "" XXX
+ SG_ 39_SECOND : 15|2@0+ (1,0) [0|3] "" XXX
+
+BO_ 426 BRAKE: 8 XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
+ SG_ BRAKE_PEDAL : 41|10@0+ (0.01,0) [0|4095] "" XXX
+
+BO_ 432 STEERING: 8 XXX
+ SG_ STEERING_ANGLE : 23|16@0- (1,0) [0|65535] "" XXX
+
 
 
 
 CM_ SG_ 804 FUEL_CONSUMED "";
 CM_ SG_ 356 FAN_OR_AC "";
 CM_ SG_ 319 13F_THIRD "Always increments of 10";
+CM_ SG_ 426 BRAKE_PEDAL "0x069 minimum, 0x2FF maximum";
